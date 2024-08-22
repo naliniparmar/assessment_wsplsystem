@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import backgroundImage from './assess_img.jpg'; // Assuming the image is in the same directory as the Header component
+import NavbarCP from './Navbar';
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState('Home');
@@ -9,15 +9,7 @@ const Header = () => {
   };
 
   return (
-    <div
-      className="bg-img"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        height: '100vh',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <div>
       {/* Tab buttons */}
       <button className="tablink" onClick={() => openPage('Home')}>Home</button>
       <button className="tablink" onClick={() => openPage('Assessment')} id="defaultOpen">Assessment Result</button>
