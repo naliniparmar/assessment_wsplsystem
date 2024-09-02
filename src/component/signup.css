@@ -1,5 +1,3 @@
-/* signup.css */
-
 /* Remove scrollbars */
 body, html {
   margin: 0;
@@ -8,13 +6,14 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Background Image Container */
 .bg-img {
   background-image: url('./assest/bg_img.jpg'); /* Path should be relative */
-  height: 100%;
-  width: 100%;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -28,8 +27,10 @@ body, html {
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 100%;
+  width: 90%;
   max-width: 450px;
+  box-sizing: border-box; /* Include padding and border in width */
+  margin: auto; /* Center the form */
 }
 
 /* Container for form elements */
@@ -37,6 +38,7 @@ body, html {
   width: 100%;
   padding: 20px;
   color: #fff;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 /* Signup Form Heading */
@@ -71,14 +73,14 @@ body, html {
   border: none;
   border-radius: 5px;
   background: #fff;
-  color: #333;
+  color: #000;
   font-size: 1em;
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
 /* Input Field Focus State */
 .input-box input:focus {
-  outline: none;
-  box-shadow: 0 0 5px #3b0e0e;
+  box-shadow: 0 0 5px #000;
 }
 
 /* Checkbox and Policy Text */
@@ -86,16 +88,18 @@ body, html {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .policy input[type="checkbox"] {
   width: 18px;
   height: 18px;
+  box-sizing: border-box; /* Include border in width */
 }
 
 /* Submit Button */
-.input-box.button input[type="submit"] {
+.input-box.button input[type="submit"],
+.input-box.button button {
   width: 100%;
   padding: 12px;
   background: #007bff;
@@ -105,10 +109,12 @@ body, html {
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s ease;
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
 /* Submit Button Hover State */
-.input-box.button input[type="submit"]:hover {
+.input-box.button input[type="submit"]:hover,
+.input-box.button button:hover {
   background: #0056b3;
 }
 
@@ -116,19 +122,66 @@ body, html {
 .text {
   text-align: center;
   margin-top: 20px;
-  color: #ffffff;
+  color: #fff;
 }
 
-.text h3 {
+.text h4 {
   margin-bottom: 10px;
 }
 
 .text p a {
-  color: #007bff;
+  color: #e61414;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .text p a:hover {
-  color: #0056b3;
+  color: #ff3333;
+}
+
+@media (max-width: 768px) {
+  .signup-page {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .input-box input[type="text"],
+  .input-box input[type="password"],
+  .input-box input[type="email"] {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .input-box.button input[type="submit"],
+  .input-box.button button {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .text p a {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 15px;
+  }
+
+  .input-box input[type="text"],
+  .input-box input[type="password"],
+  .input-box input[type="email"] {
+    padding: 6px;
+    font-size: 0.8em;
+  }
+
+  .input-box.button input[type="submit"],
+  .input-box.button button {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+
+  .text p a {
+    font-size: 0.8em;
+  }
 }

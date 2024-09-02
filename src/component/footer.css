@@ -1,0 +1,54 @@
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #eeeaea;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.footer-link {
+    display: block; /* Ensure the link is displayed as a block element for better spacing */
+    margin-top: 5px; /* Space between text and link */
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 12px; /* Smaller font size for medium devices */
+    }
+
+    .footer-link {
+        font-size: 12px; /* Ensure link size is consistent */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        font-size: 10px; /* Smaller font size for small devices */
+        padding: 8px; /* Reduced padding */
+    }
+
+    .footer-link {
+        font-size: 10px; /* Ensure link size is consistent */
+        margin-top: 3px; /* Reduced space between text and link */
+    }
+}

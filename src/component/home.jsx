@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundImage from './assest/bg_img.jpg'; // Ensure the path is correct
 import './home.css';
+import Navbar from './navbar.jsx'
 
 const Login = () => {
   const [isRegistering, setIsRegistering] = useState(false);
@@ -10,7 +11,7 @@ const Login = () => {
     setIsRegistering(!isRegistering);
   };
 
-  return (
+  return (<div className='NavContainer'><Navbar/>
     <div 
       className="bg-img" 
       style={{ 
@@ -20,10 +21,11 @@ const Login = () => {
         backgroundPosition: 'center' 
       }}
     >
+  
       <div className="login-page">
         <div className="container">
           <div className="info">
-            <h1>{isRegistering ? 'Register Form' : 'Login Form'}</h1>
+            {/* <h1>{isRegistering ? 'Register Form' : 'LFormogin '}</h1> */}
           </div>
           <div className="form">
             <div className="thumbnail">
@@ -45,14 +47,14 @@ const Login = () => {
                 <input type="password" placeholder="password" />
                 <button type="button">Login</button>
                 <p className="message">
-                  Not registered? <span onClick={toggleForm}>Create an account</span>
+                  Not registered? <p><Link to="/Signup">Create Account</Link></p>
                 </p>
               </form>
             )}
           </div>
         </div>
       </div>
-    </div>
+    </div>  </div>
   );
 }
 

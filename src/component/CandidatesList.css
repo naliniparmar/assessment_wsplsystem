@@ -1,0 +1,102 @@
+/* Background Image Container */
+.bg-img {
+    background-image: url('./assest/bg_img.jpg'); /* Path should be relative */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Candidates List Container */
+.candidates-list-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Background color for the container */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 1000px; /* Maximum width of the container */
+    width: 90%; /* Use a percentage for responsiveness */
+    box-shadow: 0 4px 8px rgba(255, 8, 8, 0.1); /* Subtle shadow for better visibility */
+    margin: auto; /* Center the container */
+}
+
+/* Heading Style */
+.candidates-list-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Table Styling */
+.result-table-container {
+    overflow-x: auto; /* Allow horizontal scrolling if table overflows */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove double borders */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Filter Container Styling */
+.filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center;
+}
+
+.filter-container label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.filter-container select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .candidates-list-container {
+        padding: 10px;
+        width: 95%; /* Increase width on smaller screens */
+    }
+    
+    th, td {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .filter-container {
+        flex-direction: column; /* Stack filter and label vertically */
+    }
+
+    .filter-container select {
+        width: 100%; /* Full width for select */
+    }
+}
+
+@media (max-width: 600px) {
+    th, td {
+        font-size: 12px; /* Adjust font size for very small screens */
+    }
+
+    .filter-container {
+        font-size: 14px; /* Slightly smaller font size for better fit */
+    }
+}

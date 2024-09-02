@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavbarCP from './Navbar';
+//import NavbarCP from './Navbar';
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState('Home');

@@ -1,5 +1,13 @@
 /* home.css */
-
+/* Remove scrollbars */
+body, html {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; Prevent scrolling */
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
 .bg-img {
   height: 100vh;
   background-size: cover;
@@ -10,7 +18,7 @@
 }
 
 .login-page {
-  background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the form */
   font-family: 'Roboto', sans-serif;
   padding: 20px;
   border-radius: 10px;
@@ -33,25 +41,31 @@
   font-weight: 700;
   color: #333;
 }
-
+/* Thumbnail Image */
+.thumbnail img {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: auto;
+}
 .form {
-  background: #f7f7f7;
+  background: #2e2929;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form .thumbnail {
-  background: #e91e63;
-  padding: 50px;
+  background: #f21414;
+  padding: 20px;
   margin-bottom: 20px;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  border-radius: 100%;
+  width: 87px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 0px;
 }
 
 .form .thumbnail img {
@@ -62,7 +76,7 @@
   width: 100%;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #0d0d0d;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
@@ -73,26 +87,26 @@
   padding: 15px;
   border: none;
   border-radius: 5px;
-  background-color: #e91e63;
-  color: white;
+  background-color: #e91e1e;
+  color: rgb(0, 0, 0);
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .form button:hover {
-  background-color: #d81b60;
+  background-color: #d81b1b;
 }
 
 .message {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #ffffff;
 }
 
 .message a {
-  color: #e91e63;
+  color: #e61414;
   text-decoration: none;
   font-weight: 500;
 }

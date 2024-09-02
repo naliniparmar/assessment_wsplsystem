@@ -1,0 +1,12 @@
+/* src/BgImage.css */
+
+.bg-img {
+    background-image: url('../assest/bg_img.jpg'); /* Ensure the path is correct */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+  }
+  

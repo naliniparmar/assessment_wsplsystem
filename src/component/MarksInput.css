@@ -1,0 +1,114 @@
+/* Background Image Container */
+.bg-img {
+  background-image: url('./assest/bg_img.jpg'); /* Path should be relative */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the container uses flex layout */
+.horizontal-container {
+  display: flex;
+  flex-direction: row; /* Arrange children horizontally */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  gap: 20px; /* Space between sections */
+  justify-content: center; /* Center align items horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+  border: #0b0b0b;
+  color: rgb(240, 52, 52);
+}
+
+/* Style each module section */
+.module-section {
+  flex: 1; /* Allow sections to grow equally */
+  min-width: 300px; /* Ensure sections have a minimum width */
+  background-color: #050505; /* Light background for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* Style form groups */
+.form-group {
+  margin-bottom: 15px;
+  color: #fffbfb;
+  font-size: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Ensure input fields don't resize on focus */
+.input {
+  width: calc(100% - 14px); /* Ensure consistent width considering padding */
+  padding: 7px;
+  border: 1px solid #0b0b0b;
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Keep the error text height consistent to avoid layout shifts */
+.error-text {
+  height: 10px; /* Set height equal to the font-size */
+  color: #ee1329;
+  font-size: 12px;
+  margin-top: 0px;
+  display: block;
+}
+
+/* Submit button styling */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #b30000;
+  border: none;
+  border-radius: 5px;
+  color: #fffbfb;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background: #000000;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .horizontal-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: stretch; /* Stretch sections to fill the container */
+  }
+
+  .module-section {
+    width: 100%; /* Ensure full width on smaller screens */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .input {
+    font-size: 14px; /* Adjust input size */
+  }
+
+  .submit-button {
+    font-size: 14px; /* Adjust button size */
+    padding: 10px;
+  }
+}

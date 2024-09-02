@@ -1,16 +1,21 @@
 import React from 'react';
-import Home from './component/home.jsx';  // Correctly imported and capitalized component names
-import Login from './component/login.jsx';
-import Signup from './component/Signup.jsx';  // Corrected the capitalization here
+import Home from './component/home.jsx';  // Match the exact filename case
+import Signup from './component/Signup.jsx';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MarksInput from './component/MarksInput.jsx';
+import ResultTable from './component/resulttable.jsx';
+import CandidatesList from './component/CandidatesList.jsx'
+
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/Signup' element={<Signup />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/marksinput' element={<MarksInput />} />
+        <Route path='/resulttable' element={<ResultTable />} />
+        <Route path='/CandidatesList' element={<CandidatesList />} />
       </Routes>
     </BrowserRouter>
   );
