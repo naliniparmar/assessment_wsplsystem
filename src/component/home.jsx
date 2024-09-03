@@ -45,7 +45,8 @@ const Login = () => {
               <form className="login-form">
                 <input type="text" placeholder="username" />
                 <input type="password" placeholder="password" />
-                <button type="button">Login</button>
+                {/* <button type="button">Login</button> */}
+                <p align='center' ><Link to="/MarksInput">Login</Link></p>
                 <p className="message">
                   Not registered? <p><Link to="/Signup">Create Account</Link></p>
                 </p>
